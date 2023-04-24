@@ -6,7 +6,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 
 
-class WebTransportTestCase(unittest.TestCase):
+class WebTransportSeleniumTestCase(unittest.TestCase):
     """A sample test class to show how page object works"""
 
     def setUp(self):
