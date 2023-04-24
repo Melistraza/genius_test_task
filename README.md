@@ -1,5 +1,5 @@
 ## Disclaimer
-This is insane task. Because technology is not ready for production use.
+Technology is not ready for production use.
 Because browser just start support it.
 Chrome start support it 22Jan2022 and only 22% of users update to this version.
 https://caniuse.com/webtransport
