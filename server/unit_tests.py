@@ -1,13 +1,7 @@
-from unittest import TestCase, mock, main
-
-from web_transport import WebTransportProtocol
+from unittest import TestCase, main
 from unittest.mock import MagicMock
 
-
-# WebTransportProtocol().quic_event_received()
-# WebTransportProtocol()._h3_event_received()
-# WebTransportProtocol()._handshake_webtransport()
-# WebTransportProtocol()._send_response()
+from web_transport import WebTransportProtocol
 
 
 class WebTransportProtocolTestCase(TestCase):
@@ -67,6 +61,7 @@ class WebTransportProtocolTestCase(TestCase):
             headers=[(b':status', b'404')],
             end_stream=True
         )
+
 
 if __name__ == '__main__':
     main()
