@@ -19,6 +19,7 @@ class WebTransportSeleniumTestCase(unittest.TestCase):
         self.driver.get("file://" + html_file)
 
     def test_server_response(self):
+        self.assertFalse('pong' in self.driver.page_source)
         connect_button = self.driver.find_element(By.ID, "connect")
         connect_button.click()
         send_button = self.driver.find_element(By.ID, "send")
