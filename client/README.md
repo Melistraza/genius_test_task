@@ -1,3 +1,3 @@
 # Client using JS
 
-just open html in patched chrome that acept self created certificate
+just open html in patched chrome that accept self created certificate

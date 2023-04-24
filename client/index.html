@@ -1,10 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
+  <title>WebTransport over HTTP/3 client</title>
+  <script src="client.js"></script>
+  <body>
+  <div id="top">
+    <div id="tool">
+    <div>
+      <h4>Establish WebTransport connection</h4>
+      <div class="input-line">
+      <input type="button" id="connect" value="Connect" onclick="connect()">
+      <label for="url">to "https://localhost:4433/wt"</label>
+      </div>
+    </div>
+    <div>
+      <h4>Send data over WebTransport Bidirectional</h4>
+      <form name="sending">
+      <input type="button" id="send" name="send" value="Send 'ping'" disabled onclick="sendData()">
+      </form>
+    </div>
+    <div>
+      <h4>Event log</h4>
+      <ul id="event-log">
+      </ul>
+    </div>
+    </div>
+  </div>
+  </body>
 </html>

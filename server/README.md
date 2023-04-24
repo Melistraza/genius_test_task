@@ -1,19 +1,23 @@
 # Python
 
-> python http3_server.py --certificate ssl_cert.pem --private-key ssl_key.pem --verbose
+### Run Server
+> python3 web_transport.py certificate.pem certificate.key
 
+### Kill
+> kill -15 $(lsof -ti:4433)
 
-## Run test
+### Browser MacOS
+>For local testing with browser
+> 
+> /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --origin-to-force-quic-on=localhost:4433 --ignore-certificate-errors-spki-list=dRdC5nAgSeEPsnMF9SvWeoPshvK0SHUp52dnbJlPmxM=
 
-> pytest test_server.py
+### Install Driver for testing
+```
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
+webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+```
 
-
-https://github.com/aiortc/aioquic/tree/main/examples
-
-
-
-### Test server (issue with certificate)
-https://googlechrome.github.io/samples/webtransport/client.html
-
-https://github.com/GoogleChrome/samples/tree/gh-pages/webtransport
-https://github.com/GoogleChrome/samples/blob/gh-pages/webtransport/webtransport_server.py
+### Run tests
+> python tests.py
