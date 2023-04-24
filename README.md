@@ -12,9 +12,8 @@ Right now any server can't support WebTransport even HTTP/3
 ## Part 1
 I have tried to test the feature but have no luck. Because I can't find any lib that can test http3 and WebTransport
 
-## Part2
 
-_________________________________________________________________________________________________________________________________________________
+## Part2
 
 ### Question
 > Make the communication channel secure or suggest what security measures you would implement given more time.
